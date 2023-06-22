@@ -39,14 +39,6 @@ Ensure that flask is downloaded and running!
 
 ```python main.py```
 
-
-## Web Inerface :
-![alt text](static/SS1.jpeg)
-
-
-![alt text](static/SS2.jpeg)
-
-
 ## Libraries used :
     1) Pandas
     2) Numpy
