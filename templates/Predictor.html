@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>About</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <style id="" media="all"></style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta name="robots" content="noindex, follow" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <link rel="icon" href="{{ url_for('static', filename='image/logo.jpeg')}}" type="image/icon type">
+  </head>
+  <body>
+    <div class="wrapper d-flex align-items-stretch">
+      <!-- Sidebar Start  -->
+      <nav id="sidebar" style="background-color: white">
+        <div class="custom-menu">
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+        </div>
+        <div class="p-4 pt-5" style="position: fixed">
+          <h3>
+            <a
+              href="index.html"
+              class="logo"
+              style="color: #0138cc; font-weight: bold"
+              >CrimeWatch</a
+            >
+          </h3>
+          <ul class="list-unstyled components mb-5" style="margin-top: 3.25rem">
+            <li>
+              <a href="Apphome.html" style="color: black; margin-right: 1.5rem">
+                <i
+                  class="fa-solid fa-house-user"
+                  style="margin-right: 1.1rem"
+                ></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="#pageSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                style="color: black"
+              >
+                <i
+                  class="fa-solid fa-chart-line"
+                  style="margin-right: 1.1rem"
+                ></i>
+                Analysis</a
+              >
+              <ul class="collapse list-unstyled" id="pageSubmenu">
+                <li>
+                  <a href="Analytics.html" style="color: black">
+                    <i
+                      class="fa-solid fa-image"
+                      style="margin-right: 1.1rem"
+                    ></i>
+                    Plot Analysis
+                  </a>
+                </li>
+                <li>
+                  <a href="GeoAnalytics.html" style="color: black">
+                    <i
+                      class="fa-solid fa-map-location-dot"
+                      style="margin-right: 1.1rem"
+                    ></i>
+                    Geo Analysis
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="Predictor.html" style="color: black">
+                <i
+                  class="fa-solid fa-calculator"
+                  style="margin-right: 1.1rem"
+                ></i>
+                Map Prediction
+              </a>
+            </li>
+            <li>
+              <a
+                href="#homeSubmenu"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="dropdown-toggle"
+                style="color: black"
+              >
+              <i  class="fa-regular fa-clock" style="margin-right: 1.1rem"></i>
+                Time Series</a
+              >
+              <ul class="collapse list-unstyled" id="homeSubmenu">
+                <li style="padding-left: 2rem">
+                  <a href="Crime1.html" style="color: black"> Crime1 </a>
+                </li>
+                <li style="padding-left: 2rem">
+                  <a href="Crime2.html" style="color: black"> Crime2 </a>
+                </li>
+                <li style="padding-left: 2rem">
+                  <a href="Crime1.html" style="color: black"> Crime3 </a>
+                </li>
+                <li style="padding-left: 2rem">
+                  <a href="Crime2.html" style="color: black"> Crime4 </a>
+                </li>
+                <li style="padding-left: 2rem">
+                  <a href="Crime1.html" style="color: black"> Crime5 </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="References.html" style="color: black">
+                <i class="fa-solid fa-book" style="margin-right: 1.1rem"></i>
+                References
+              </a>
+            </li>
+          </ul>
+          <div
+            class="footer"
+            style="position: absolute; bottom: 5px; font-size: 1.05rem"
+          ></div>
+        </div>
+      </nav>
+      <!-- Sidebar End  -->
+      <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5 pt-5" style="font-size: 1.25rem">
+        <h2 class="mb-4 text-center">Crime Prediction</h2>
+        <div class="wrap"  style="background-color: white; border : .2px solid rgba(180, 180, 180, 0.843); padding: 2rem; border-radius: 2px">
+          <div id="map"></div>
+          <form action="/Predictor.html" method="post" class="form" style="background-color: white; padding: 3rem 1.5rem; border-radius: 5%;">
+              <input type="text" id="latitude" placeholder="latitude" style="margin-bottom: 1rem; background-color: #FAFAFA; color: black; border: .2px solid rgba(128, 128, 128, 0.43); padding: 1rem 2rem;">
+              <input type="text" id="longitude" placeholder="longitude" style="margin-bottom: 1rem; background-color: #FAFAFA; color: black; border: .2px solid rgba(128, 128, 128, 0.43); padding: 1rem 2rem;">
+              
+              <!-- Button to send latitude and longitude -->
+              <input type="submit" id="submit" value="Submit" style="background-color: #0138cc; color: white; border: none; padding: 1rem 2rem; border-radius: 5px; cursor: pointer; font-size: large;">
+          </form>
+          
+          <h1>{{prediction}}</h1>
+        </div>
+      <!--Page Content End-->
+    </div>
+  </body>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script defer>
+    let mapOptions = {
+    center:[42.357791, -71],
+    zoom:10
+    }
+
+    let map = new L.map('map' , mapOptions);
+
+    let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    map.addLayer(layer);
+
+
+    let marker = null;
+    map.on('click', (event)=> {
+
+        if(marker !== null){
+            map.removeLayer(marker);
+        }
+
+        marker = L.marker([event.latlng.lat , event.latlng.lng]).addTo(map);
+
+        document.getElementById('latitude').value = event.latlng.lat;
+        document.getElementById('longitude').value = event.latlng.lng;
+        
+    });
+  </script>
+  <script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/popper.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/main.js"></script>
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"
+    integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA=="
+    data-cf-beacon='{"rayId":"76894ea89b8ee61e","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.0","si":100}'
+    crossorigin="anonymous"
+  ></script>
+</html>

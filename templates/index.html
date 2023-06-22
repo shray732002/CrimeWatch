@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='HomePage.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='HomePage.css')}}"
+    />
+    <title>AatmaNirbhar</title>
+    <link rel="icon" href="{{ url_for('static', filename='image/logo.jpeg')}}" type="image/icon type">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#">
+        <div>
+          <h1 class="titleHead1">AatmaNirbhar</h1>
+        </div>
+      </a>
+        <div>
+          <div>
+            <ul class="nav-div">
+              <li class="nav-div_light">
+                <a href="Apphome.html">CrimeWatch</a>
+              </li>
+              <li class="nav-div_light"><a href="#feature">Features</a></li>
+              <li class="nav-div_light"><a href="#team">Team</a></li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <ul class="nav-div">
+            <li class="nav-div_btn_dark"><a href="#team">Get in Touch</a></li>
+          </ul>
+        </div> 
+      </nav>
+    </header>
+    <section id="" class="homeScreen">
+      <div class="landingSection">
+        <div class="mainText">
+          <h1 class="titleHead2">
+            Predicting crime,<span class="titleheadspan"> protecting</span>
+            communities
+          </h1>
+        </div>
+        <div class="para">
+          Welcome to our crime prediction website! We are dedicated to helping
+          individuals and communities stay safe by providing accurate and
+          up-to-date information about crime trends and patterns in their area.
+        </div>
+      </div>
+
+      <div class="flexdiv">
+        <div class="divMargin">
+          <h1>Our Mission</h1>
+        </div>
+        <div class="para5">
+          <p class="para4">
+            Crime prediction is the use of data and algorithms to try to predict
+            where and when crimes are likely to occur. It is a complex and
+            evolving field that involves analyzing data about past crimes and
+            other relevant factors to identify patterns and trends that may
+            indicate the likelihood of future crimes
+          </p>
+        </div>
+      </div>
+      <div class="svgImage">
+        <img
+          style="height: 50rem"
+          src="{{ url_for('static', filename='image/groupShapes.svg')}}"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <!-- Section for core features -->
+    <section id="feature" class="section-features">
+      <div class="container" style="font-family: 'Montserrat', sans-serif ;">
+        <div
+          class="header-section"
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        style="font-family: 'Montserrat', sans-serif ;" >
+          <div class="col-lg-6">
+            <div class="header-titles">
+              <!-- <h2 class="first-title">Perfect Solution Makes</h2> -->
+              <h2 class="second-title">
+                Our <span style="color: #1db954">Core Features</span>
+              </h2>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <p class="header-description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+              ut ultricies magna. Maecenas quis faucibus neque, ut tristique
+              ipsum. Aenean suscipit ultricies ex eget consequat. Curabitur
+              posuere semper enim elementum eleifend. Ut sit amet dictum eros,
+              ut hendrerit mi.
+            </p>
+          </div>
+        </div>
+        <div class="row text-center justify-content-around">
+          <!-- single featues -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="single-feature feature1">
+              <img src="https://i.ibb.co/qnPfZyD/feature1.jpg" alt="" />
+              <div class="infos" style="font-family: 'Montserrat', sans-serif ;">
+                <span class="icon-feature" style = "font-family: inherit;">
+                  <i class="fas fa-chart-line" ></i>
+                </span>
+                <h3 class="title">Prediction and Visualisation</h3>
+                <a href="#" class="read-more"
+                  >Read More <i class="fas fa-long-arrow-alt-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- / end single featues -->
+          <!-- single featues -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div class="single-feature feature2">
+              <img src="https://i.ibb.co/qsdqzxh/feature2.jpg" alt="" />
+              <div class="infos" style="font-family: 'Montserrat', sans-serif ;">
+                <span class="icon-feature">
+                  <i class="fas fa-chart-pie"></i>
+                </span>
+                <h3 class="title">Model Training and Evaluation</h3>
+                <a href="#" class="read-more"
+                  >Read More <i class="fas fa-long-arrow-alt-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- / end single featues -->
+          <!-- single featues -->
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <div
+              class="single-feature feature3"
+              style="height: 40rem; width: auto"
+            >
+              <img src="https://i.ibb.co/k5M5DHC/feature3.jpg" alt="" />
+              <div class="infos" style="font-family: 'Montserrat', sans-serif ;">
+                <span class="icon-feature">
+                  <i class="fas fa-chart-bar"></i>
+                </span>
+                <h3 class="title">Feature Engineering</h3>
+                <a href="#" class="read-more"
+                  >Read More <i class="fas fa-long-arrow-alt-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- / end single featues -->
+        </div>
+      </div>
+    </section>
+    <!--Core features end-->
+
+    <section id="team" class="teamScreen">
+      <div>
+        <h1 class="titleHead3">Our Team</h1>
+        <p class="para2">
+          We are a team of dedicated individuals who are passionate about
+          helping individuals and communities stay safe.
+        </p>
+
+        <div class="page-content">
+          <div class="card ">
+            <div class="content" style="font-family: 'Montserrat', sans-serif ;">
+              <h2 class="title" style="font-size: 2rem">Sai Vamshi Nayak</h2>
+              <p
+                class="copy"
+                style="font-family: Montserrat; font-size: 1.6rem"
+              >
+                Skills : Frontend Development, Backend Development, UI/UX Design
+              </p>
+              <a
+                href="https://www.linkedin.com/in/vamshi5421/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                style="text-decoration: none"
+              >
+                <i class="fab fa-linkedin"></i>
+                Connect
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content" style="font-family: 'Montserrat', sans-serif ;">
+              <h2 class="title" style="font-size: 2rem">Aaryan Gupta</h2>
+              <p
+                class="copy"
+                style="font-family: Montserrat; font-size: 1.6rem"
+              >
+                Skills : Fullstack Development, Linux, Data Structures and
+                Algorithms, Blockchain
+              </p>
+              <a
+                href="https://www.linkedin.com/in/aaryan-gupta-a881661b8/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                style="text-decoration: none"
+              >
+                <i class="fab fa-linkedin"></i>
+
+                Connect
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content" style="font-family: 'Montserrat', sans-serif ;">
+              <h2 class="title" style="font-size: 2rem">Mayank Kumar</h2>
+              <p
+                class="copy"
+                style="font-family: Montserrat; font-size: 1.6rem"
+              >
+                Skills : Frontend Development, Backend Development, UI/UX Design
+              </p>
+              <a
+                href="https://www.linkedin.com/in/mayank-kumar2002/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                style="text-decoration: none"
+              >
+                <i class="fab fa-linkedin"></i>
+
+                Connect
+              </a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="content">
+              <h2 class="title" style="font-size: 2rem;font-family: Montserrat;">Shray Kumar Singh</h2>
+              <p
+                class="copy"
+                style="font-family: Montserrat; font-size: 1.6rem"
+              >
+                Skills : Frontend Development, Backend Development, UI/UX Design
+              </p>
+              <a
+                href="https://www.linkedin.com/in/shray-singh-1666b71ba/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+                style="text-decoration: none"
+              >
+                <i class="fab fa-linkedin"></i>
+
+                Connect
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+
+  <footer>
+    <div class="footer">
+      <div class="footerText">
+        <p class="footerText_para">© 2023 Team AatmaNirbhar</p>
+      </div>
+    </div>
+  </footer>
+</html>
